@@ -1,0 +1,22 @@
+{
+  "name": "klipsownia-scraper",
+  "version": "1.0.0",
+  "description": "Automatyczny scraper dla klipsownia.net – działa na Railway",
+  "main": "index.js",
+  "scripts": {
+    "start":      "node index.js",
+    "scrape:now": "node scraper/run-once.js"
+  },
+  "dependencies": {
+    "cheerio":    "^1.0.0",
+    "dotenv":     "^16.4.5",
+    "mysql2":     "^3.9.7",
+    "node-cron":  "^3.0.3",
+    "node-fetch": "^2.7.0",
+    "slugify":    "^1.6.6",
+    "winston":    "^3.13.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
