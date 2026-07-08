@@ -1,7 +1,8 @@
 require('dotenv').config();
 const cheerio = require('cheerio');
 const slugify = require('slugify');
-const { pool } = require('../db/pool');
+const { execute, getConnection } = require('../db/pool');
+const pool = { execute, getConnection };
 const logger    = require('../config/logger');
 
 const DELAY_MS    = parseInt(process.env.SCRAPE_DELAY_MS)    || 3000;
