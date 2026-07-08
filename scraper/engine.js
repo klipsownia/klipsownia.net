@@ -1,6 +1,5 @@
 // scraper/engine.js – Cheerio + node-fetch (bez Puppeteer)
 require('dotenv').config();
-const fetch   = require('node-fetch');
 const cheerio = require('cheerio');
 const slugify = require('slugify');
 const { pool } = require('../db/pool');
