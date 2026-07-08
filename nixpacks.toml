@@ -1,8 +1,5 @@
-[phases.setup]
-nixPkgs = ["nodejs_20", "npm-9_x"]
-
 [phases.install]
-cmds = ["npm install --legacy-peer-deps"]
+cmds = ["npm ci --ignore-scripts"]
 
 [start]
 cmd = "node index.js"
