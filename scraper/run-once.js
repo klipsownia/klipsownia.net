@@ -1,8 +1,7 @@
 require('dotenv').config();
 const { runAllTargets } = require('./engine');
-const { pool }          = require('../db/pool');
-const logger            = require('../config/logger');
-
+const { pool } = require('../db/pool');
+const logger = require('../config/logger');
 (async () => {
   try {
     await runAllTargets();
