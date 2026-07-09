@@ -1,5 +1,6 @@
 // index.js – Railway: mini serwer HTTP + cron scheduler
 require('dotenv').config();
+const { pool, testConnection, execute } = require('./db/pool');
 const http     = require('http');
 const cron     = require('node-cron');
 const { pool, testConnection } = require('./db/pool');
