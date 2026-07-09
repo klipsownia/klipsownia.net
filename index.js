@@ -3,7 +3,6 @@ require('dotenv').config();
 const { pool, testConnection, execute } = require('./db/pool');
 const http     = require('http');
 const cron     = require('node-cron');
-const { pool, testConnection } = require('./db/pool');
 const { runAllTargets }        = require('./scraper/engine');
 const logger                   = require('./config/logger');
 
