@@ -57,13 +57,13 @@ const server = http.createServer(async (req, res) => {
   // Stats – ostatnie logi scrapowania
   if (url === '/stats') {
     try {
-      const [logs] = await pool.execute(`
+      const [logs] = await execute(`
         SELECT l.*, t.name AS target_name
         FROM scrape_logs l
         LEFT JOIN scrape_targets t ON t.id = l.target_id
         ORDER BY l.started_at DESC LIMIT 20
       `);
-      const [counts] = await pool.execute(`
+      const [counts] = await execute(`
         SELECT
           (SELECT COUNT(*) FROM sites WHERE is_active=1) AS sites,
           (SELECT COUNT(*) FROM scrape_targets WHERE is_active=1) AS targets
